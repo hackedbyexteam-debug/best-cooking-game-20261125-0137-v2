@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ember Kitchen — a cozy bistro rush</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  html, body { margin: 0; padding: 0; background: #1d130e; height: 100%; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  #wrap { position: relative; width: min(100vw, 160vh); aspect-ratio: 1280 / 800; }
+  canvas { width: 100%; height: 100%; display: block; border-radius: 10px;
+    box-shadow: 0 24px 80px rgba(0,0,0,.65), 0 0 0 1px rgba(255,255,255,.06); }
+  #hint { position: absolute; left: 14px; bottom: 10px; color: rgba(255,244,220,.55);
+    font: 12px/1.4 system-ui, sans-serif; letter-spacing: .02em; pointer-events: none; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="800"></canvas>
+  <div id="hint">Click ingredients to build the dish &middot; click the grill to take a cooked patty &middot; click a ticket to serve &middot; keys 1&ndash;6 ingredients, G grill, T trash, Space serve</div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
